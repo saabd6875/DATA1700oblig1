@@ -15,7 +15,7 @@
             <option>Titanic</option>
             <option>Lala Land</option>
             <option>Howls Moving Castle</option>
-            <option>THE MOVIE</option>
+            <option>The Movie</option>
         </select>
 
         </td></tr>
@@ -32,18 +32,23 @@
 <br>
 <div>
     <table>
-        <tr><td>Fornavn  </td>
+        <tr><td><label for="fname">Fornavn </label></td>
             <td><input type="text" id="fname"></td></tr>
-        <tr><td>Etternavn  </td>
+        <tr><td><label for="lname">Etternavn</label> </td>
             <td><input type="text" id="lname"></td></tr>
-        <tr> <td>Telefonnr  </td>
+        <tr> <td><label for="phonenr">Telefonnr</label></td>
             <td><input type="number" id="phonenr" pattern="[0-9]{8}"></td></tr>
-        <tr><td>Epost  </td>
+        <tr><td><label for="mail">Epost</label></td>
             <td><input type="email" id="mail"> </td></tr>
-
-
     </table>
-</div>
 
+
+</div>
+<button onclick="addToArray()">Kjøp billett</button>
+<br>
+<script src="billett.js">
+</script>
+<p id="resultObject">
+</p>
 </body>
 </html>
