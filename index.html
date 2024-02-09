@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>kinobilleter</title>
+</head>
+<body>
+<h2> Bestilling av kinobiletter.</h2>
+
+<table>
+    <tr> <td>Velg film:</td>
+        <td>
+        <select id="film">
+            <option>velg film her</option>
+            <option>Titanic</option>
+            <option>Lala Land</option>
+            <option>Howls Moving Castle</option>
+            <option>THE MOVIE</option>
+        </select>
+
+        </td></tr>
+</table>
+<span id="resultat"></span>
+<br>
+<br>
+<div>
+    <label for="quantity">Antall:</label>
+    <input type="number" id="quantity" name="quantity"
+           pattern="[0-9]" title="Skriv antall billetter:">
+</div>
+<br>
+<br>
+<div>
+    <table>
+        <tr><td>Fornavn  </td>
+            <td><input type="text" id="fname"></td></tr>
+        <tr><td>Etternavn  </td>
+            <td><input type="text" id="lname"></td></tr>
+        <tr> <td>Telefonnr  </td>
+            <td><input type="number" id="phonenr" pattern="[0-9]{8}"></td></tr>
+        <tr><td>Epost  </td>
+            <td><input type="email" id="mail"> </td></tr>
+
+
+    </table>
+</div>
+
+</body>
+</html>
