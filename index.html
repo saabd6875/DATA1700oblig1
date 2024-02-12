@@ -5,28 +5,32 @@
     <title>kinobilleter</title>
 </head>
 <body>
-<h2> Bestilling av kinobiletter.</h2>
+<script src="billett.js">
+</script>
+<h1> Bestilling av kinobiletter.</h1>
 
 <table>
     <tr> <td>Velg film:</td>
         <td>
-        <select id="film">
-            <option>velg film her</option>
-            <option>Titanic</option>
-            <option>Lala Land</option>
-            <option>Howls Moving Castle</option>
-            <option>The Movie</option>
-        </select>
-
-        </td></tr>
+            <select id="film">
+                <option>velg film her</option>
+                <option>Titanic</option>
+                <option>Lala Land</option>
+                <option>Howls Moving Castle</option>
+                <option>The Movie</option>
+            </select>
+        </td>
+    </tr>
 </table>
+<br>
+
 <span id="resultat"></span>
 <br>
 <br>
 <div>
     <label for="quantity">Antall:</label>
     <input type="number" id="quantity" name="quantity"
-           pattern="[0-9]" title="Skriv antall billetter:">
+           title="Skriv antall billetter:">
 </div>
 <br>
 <br>
@@ -37,17 +41,16 @@
         <tr><td><label for="lname">Etternavn</label> </td>
             <td><input type="text" id="lname"></td></tr>
         <tr> <td><label for="phonenr">Telefonnr</label></td>
-            <td><input type="number" id="phonenr" pattern="[0-9]{8}"></td></tr>
+            <td><input type="number" id="phonenr" maxlength="8"></td></tr>
         <tr><td><label for="mail">Epost</label></td>
             <td><input type="email" id="mail"> </td></tr>
     </table>
 
 
 </div>
-<button onclick="addToArray()">Kjøp billett</button>
+<button type="button" onclick="addToArray()">Kjøp billett</button>
 <br>
-<script src="billett.js">
-</script>
+
 <p id="resultObject">
 </p>
 </body>
