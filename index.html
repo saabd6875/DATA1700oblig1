@@ -7,51 +7,51 @@
 <body>
 <script src="billett.js">
 </script>
-<h1> Bestilling av kinobiletter.</h1>
-
+<h1> Bestilling av kinobilletter.</h1>
+<form>
 <table>
     <tr> <td>Velg film:</td>
         <td>
-            <select id="film">
-                <option>velg film her</option>
-                <option>Titanic</option>
-                <option>Lala Land</option>
-                <option>Howls Moving Castle</option>
-                <option>The Movie</option>
+            <select id="film" title="velg film her:">
+                <option>Titanic.</option>
+                <option>Lala Land.</option>
+                <option>Howls Moving Castle.</option>
+                <option>The Movie.</option>
             </select>
         </td>
     </tr>
 </table>
 <br>
-
-<span id="resultat"></span>
-<br>
 <br>
 <div>
     <label for="quantity">Antall:</label>
     <input type="number" id="quantity" name="quantity"
-           title="Skriv antall billetter:">
+           maxlength="2" title="Skriv antall billetter:">
 </div>
 <br>
 <br>
 <div>
     <table>
         <tr><td><label for="fname">Fornavn </label></td>
-            <td><input type="text" id="fname"></td></tr>
+            <td><input type="text" id="fname" required></td></tr>
         <tr><td><label for="lname">Etternavn</label> </td>
-            <td><input type="text" id="lname"></td></tr>
+            <td><input type="text" id="lname"  required></td></tr>
         <tr> <td><label for="phonenr">Telefonnr</label></td>
-            <td><input type="number" id="phonenr" maxlength="8"></td></tr>
+            <td><input type="tel" id="phonenr" maxlength="8" required></td></tr>
         <tr><td><label for="mail">Epost</label></td>
-            <td><input type="email" id="mail"> </td></tr>
+            <td><input type="email" id="mail" required> </td></tr>
     </table>
-
-
 </div>
-<button type="button" onclick="addToArray()">Kjøp billett</button>
+<button type="submit" onclick="addToArray()">Kjøp billett</button>
 <br>
 
-<p id="resultObject">
-</p>
+</form>
+<h2>Alle billetter:</h2>
+
+<h3 style="margin-left: 50px">Film Antall Fornavn Etternavn Tlfnr Epost</h3>
+<p id="resultObject"></p>
+
+
+<button type="button" onclick="SlettArray()">Slett billtene</button>
 </body>
 </html>
