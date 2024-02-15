@@ -62,7 +62,7 @@ function validerLname(lname){
     }
 }
 function validerAntall(quantity){
-    const regexp = /^[0-9]{2}$/;
+    const regexp = /^[0-9]{1,2}$/;
     const ok = regexp.test(quantity);
     if(!ok) {
         $("#feilQuantity").html("antall må bestå av 1-2 siffer")
